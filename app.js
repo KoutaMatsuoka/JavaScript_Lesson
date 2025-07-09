@@ -122,7 +122,7 @@ console.log("5 を 3 で割った余りは " + remainder(5,3) + " です。");
 //その理由を以下 2 つの単語を使用し app.js にコメントアウトで回答してください。
 //・スコープ
 //・参照
-
+let x = 0;
 function foo() {
   let x = 1;
 }
@@ -136,10 +136,17 @@ console.log(x);
 //Q1 標準組み込みオブジェクト
 //標準組み込みオブジェクト Math を使用し、0 ~ 9 のランダムな整数をコンソールに出力してください。
 
+console.log(Math.random());
+
 //Q2 コールバック関数
 //関数 setTimeout を使用し、3 秒後に以下のようにコンソールに出力してください。
 
-Hello World!
+
+function timerStop(){
+  console.log("Hello World!");
+}
+
+setTimeout(timerStop, 3000);
 
 //Q3 if
 //変数 num に 任意の数値を代入し、下記条件のもと文字列をコンソールに出し分ける処理を作成してください。
@@ -148,10 +155,24 @@ Hello World!
 //num が 0 より大きければnum is greater than 0
 //num が 0 より小さければnum is less than 0
 //num が 0 であればnum is 0
-
+let num = 1;
+if(num > 0){
+  console.log("num is greater than 0");
+}else if(num < 0){
+  console.log("num is less than 0");
+}else if(num === 0){
+  console.log("num is 0");
+};
 
 //Q4 for
 //変数 numbers に空の配列を代入した後、0 ~ 99 までの数字を変数 numbers に全て追加し、値が追加された状態の変数 numbers をコンソールに出力してください
+
+let numbers = [];
+for(i = 0; i <= 99; i++){
+  numbers[i] = i
+};
+
+console.log(numbers);
 
 //Q5 for × if
 //以下の変数 mixed から 要素を一つずつ取り出し、下記条件のもと文字列をコンソールに出し分ける処理を作成してください。
@@ -162,3 +183,11 @@ let mixed = [4, '2', 5, '8', '9', 0, 1];
 //Number であり偶数の時は even
 //Number であり奇数の時は odd
 //Number 以外の時は not number
+
+for(i=0; i < mixed.length; i++){
+  if(typeof mixed[i] == "number"){
+    mixed[i] % 2 === 0  ? console.log("even") : console.log("odd");
+  }else{
+    console.log("not number")
+  }
+};
