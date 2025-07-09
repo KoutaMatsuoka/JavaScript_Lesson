@@ -76,7 +76,12 @@ sayWorld();
 //Q3 で定義した変数 user に Hello！とコンソールに出力するメソッド sayHello を追加し、実行してください。
 //※ いずれも Q3 で定義した変数 user を直接書き換えないこと
 
+user.birthday = "2000-09-27";
+user.sayHello = function(){
+  console.log("Hello!");
+}
 
+user.sayHello();
 
 //Q8 引数
 //下記の空のオブジェクト calc を使用し、以下問題を解いてください。
@@ -86,11 +91,28 @@ sayWorld();
 //2 つの引数 x, y の商をコンソールに出力する divide メソッドを定義し、5 になるように実行して下さい。
 
 let calc = {};
+calc.add = function(x, y){
+  console.log(x + y);
+}
+calc.subtract = function(x, y){
+  console.log(x - y);
+}
+calc.multiply = function(x, y){
+  console.log(x * y);
+}
+calc.divide = function(x, y){
+  console.log(x / y);
+}
+
+calc.add(3,4);
+calc.subtract(20,10);
+calc.multiply(7,7);
+calc.divide(10,2);
 
 //Q9 返り値
 //2 つの引数 x, y を受け取り、x を y で割った剰余を返り値とする関数 remainder を定義し、5 と 3 を引数に渡して実行した返り値を用いて文字列連結で以下のようにコンソールに出力してください。
 
-function  remainder(x,y){
+function  remainder(x, y){
   return x % y
 };
 console.log("5 を 3 で割った余りは " + remainder(5,3) + " です。");
