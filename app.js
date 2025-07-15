@@ -52,7 +52,7 @@ console.log(playerList[1].favorites[1]);
 //Q5 四則演算
 //Q4 で定義した変数 playerList を使用し、John, Bob, Michael の年齢の平均値を計算した結果をコンソールに出力してください。
 
-sumAge = playerList[0].age + playerList[1].age + playerList[2].age;
+let sumAge = playerList[0].age + playerList[1].age + playerList[2].age;
 console.log(sumAge / playerList.length);
 
 //Q6 関数
@@ -122,21 +122,21 @@ console.log("5 を 3 で割った余りは " + remainder(5,3) + " です。");
 //その理由を以下 2 つの単語を使用し app.js にコメントアウトで回答してください。
 //・スコープ
 //・参照
-//let x = 0; コンソールの一括確認用
+//let x = 0; //コンソールの一括確認用
 function foo() {
   let x = 1;
 }
 console.log(x);
 
 //回答
-//変数xを得異議しているのは関数foo()のスコープであり、関数定義の外にあるconsole.logにおける変数xはそれを参照しないため。
+//変数xを定義しているのは関数foo()のスコープであり、関数定義の外にあるconsole.logにおける変数xはそれを参照しないため。
 
 //応用編
 
 //Q1 標準組み込みオブジェクト
 //標準組み込みオブジェクト Math を使用し、0 ~ 9 のランダムな整数をコンソールに出力してください。
 
-console.log(Math.random());
+console.log(Math.floor(Math.random() * 10));
 
 //Q2 コールバック関数
 //関数 setTimeout を使用し、3 秒後に以下のようにコンソールに出力してください。
