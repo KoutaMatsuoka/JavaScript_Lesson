@@ -1,12 +1,15 @@
-//基礎編
+# 基礎編
 
-//Q1 変数
-// 変数 nickname, age に自分の名前と年齢を代入し、文字列連結で以下のようにコンソールに出力してください。
+## Q1 変数
 
-let nickname = "松岡";
-let age = 25;
+|変数 nickname, age に自分の名前と年齢を代入し、文字列連結で以下のようにコンソールに出力してください。
 
-console.log("私のニックネームは" + nickname + "です。年齢は" + age + "歳です。");
+`let nickname = "松岡";`
+`let age = 25;`
+`let`でnickname、age二つの変数に値を代入
+`console.log("私のニックネームは" + nickname + "です。年齢は" + age + "歳です。");`
+コンソールに出力
+
 
 //Q2 配列変数
 //languages に JavaScript, PHP, Ruby, Python, Go の 5 つの値を持つ配列を代入し、その中から JavaScript, Python を取得し、テンプレートリテラルを用いて以下のようにコンソールに出力してください。
@@ -59,13 +62,13 @@ console.log(sumAge / playerList.length);
 //Hello とコンソールに出力する関数 sayHello を定義し、実行してください。
 //変数 sayWorld に World とコンソールに出力する無名関数を代入し、実行してください。
 
-function sayHello() {
+function sayHello(){
   console.log("Hello");
 }
 
 sayHello();
 
-let sayWorld = function() {
+let sayWorld = function(){
   console.log("World");
 };
 
@@ -77,7 +80,7 @@ sayWorld();
 //※ いずれも Q3 で定義した変数 user を直接書き換えないこと
 
 user.birthday = "2000-09-27";
-user.sayHello = function() {
+user.sayHello = function(){
   console.log("Hello!");
 }
 
@@ -91,31 +94,31 @@ user.sayHello();
 //2 つの引数 x, y の商をコンソールに出力する divide メソッドを定義し、5 になるように実行して下さい。
 
 let calc = {};
-calc.add = function(x, y) {
+calc.add = function(x, y){
   console.log(x + y);
 }
-calc.subtract = function(x, y) {
+calc.subtract = function(x, y){
   console.log(x - y);
 }
-calc.multiply = function(x, y) {
+calc.multiply = function(x, y){
   console.log(x * y);
 }
-calc.divide = function(x, y) {
+calc.divide = function(x, y){
   console.log(x / y);
 }
 
-calc.add(3, 4);
-calc.subtract(20, 10);
-calc.multiply(7, 7);
-calc.divide(10, 2);
+calc.add(3,4);
+calc.subtract(20,10);
+calc.multiply(7,7);
+calc.divide(10,2);
 
 //Q9 返り値
 //2 つの引数 x, y を受け取り、x を y で割った剰余を返り値とする関数 remainder を定義し、5 と 3 を引数に渡して実行した返り値を用いて文字列連結で以下のようにコンソールに出力してください。
 
-function  remainder(x, y) {
+function  remainder(x, y){
   return x % y
 };
-console.log("5 を 3 で割った余りは " + remainder(5, 3) + " です。");
+console.log("5 を 3 で割った余りは " + remainder(5,3) + " です。");
 
 //Q10 スコープ
 //下記の console.log(x); においてコンソールに 1 が出力されることはなく、x is not defined（変数 x が定義されていない）というエラーが出力されます。
@@ -142,7 +145,7 @@ console.log(Math.floor(Math.random() * 10));
 //関数 setTimeout を使用し、3 秒後に以下のようにコンソールに出力してください。
 
 
-function timerStop() {
+function timerStop(){
   console.log("Hello World!");
 }
 
@@ -156,11 +159,11 @@ setTimeout(timerStop, 3000);
 //num が 0 より小さければnum is less than 0
 //num が 0 であればnum is 0
 let num = 1;
-if (num > 0) {
+if(num > 0){
   console.log("num is greater than 0");
-} else if(num < 0) {
+}else if(num < 0){
   console.log("num is less than 0");
-} else if(num === 0) {
+}else if(num === 0){
   console.log("num is 0");
 };
 
@@ -168,7 +171,7 @@ if (num > 0) {
 //変数 numbers に空の配列を代入した後、0 ~ 99 までの数字を変数 numbers に全て追加し、値が追加された状態の変数 numbers をコンソールに出力してください
 
 let numbers = [];
-for (i = 0; i <= 99; i++) {
+for(i = 0; i <= 99; i++){
   numbers[i] = i
 };
 
@@ -184,10 +187,10 @@ let mixed = [4, '2', 5, '8', '9', 0, 1];
 //Number であり奇数の時は odd
 //Number 以外の時は not number
 
-for (i = 0; i < mixed.length; i++) {
-  if(typeof mixed[i] === "number"){
-    mixed[i] % 2 === 0 ? console.log("even") : console.log("odd");
-  } else {
+for(i=0; i < mixed.length; i++){
+  if(typeof mixed[i] == "number"){
+    mixed[i] % 2 === 0  ? console.log("even") : console.log("odd");
+  }else{
     console.log("not number")
   }
 };
